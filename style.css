@@ -8,11 +8,32 @@ a{
 }
 
 body{
-    background-image: url(image/OIP.webp);
+    background-image: url(image/nature.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+
+.myheader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.liens{
+    display: flex;
+    justify-content: space-around;
+}
+
+ul li {
+    padding: 30px;
+    list-style-type: none;
 }
 
 h1{
@@ -23,11 +44,7 @@ h1{
     margin:0 auto;
     background-color: rgb(255, 127, 174);
 }
-h2{
-    color: rgb(123, 76, 168);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    border: 50px;
-}
+
 .go{
     color: coral;
     background-color: azure;
@@ -43,4 +60,63 @@ h2{
 }
 .tortue{
     background-color: burlywood;
+}
+
+.banderole{
+    display: flex;
+    justify-content: center;
+}
+.totem{
+    display: flex;
+    justify-content: center;
+}
+
+.bleu{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.rouge{
+    display: flex;
+    justify-content: space-around;
+}
+.rose{
+    display: flex;
+    justify-content: space-around;
+}
+.jour{
+   border: 1px solid black;
+   background-color: aqua;
+   width: 150px;
+   height: 150px;
+   justify-content: space-around;
+}
+
+.bonjour{
+    border: 1px solid black;
+    background-color: aqua;
+    width: 150px;
+    height: 150px;
+    justify-content: flex-start;
+}
+
+.buenos{
+    border: 1px solid black;
+    background-color: rgb(255, 0, 187);
+    width: 150px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.guten{
+    border: 1px solid greenyellow;background-color: rgb(255, 0, 0);
+    width: 150px;
+    height: 150px;
+    justify-content: space-around;
+}
+
+.good{
+    border: 1px solid greenyellow;background-color: rgb(255, 0, 0);
+    width: 150px;
+    height: 150px;
+    justify-content: space-around;
 }
