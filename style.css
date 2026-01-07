@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    background-image: url(image/OIP.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color: rgb(0, 255, 238);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font: size 1em;
+    text-align: center;
+    margin:0 auto;
+    background-color: rgb(255, 127, 174);
+}
+h2{
+    color: rgb(123, 76, 168);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 50px;
+}
+.go{
+    color: coral;
+    background-color: azure;
+}
+#unique {
+    font-size: 25px;
+    text-align: right;
+}
+.ninja{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+.tortue{
+    background-color: burlywood;
+}
