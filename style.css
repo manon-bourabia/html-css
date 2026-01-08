@@ -61,7 +61,7 @@ h1{
 .tortue{
     background-color: burlywood;
 }
-
+/* 
 .banderole{
     display: flex;
     justify-content: center;
@@ -79,9 +79,6 @@ h1{
     display: flex;
     justify-content: space-around;
 }
-.rose{
-    display: flex;
-    justify-content: space-around;
 }
 .jour{
    border: 1px solid black;
@@ -119,7 +116,40 @@ h1{
     width: 150px;
     height: 150px;
     justify-content: space-around;
+} */
+.box-green{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    border: 10px solid lightgreen;
 }
+.box-blue{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    border: 10px solid lightblue;
+    
+}
+.box-purple{
+    width: 150px;
+    height: 150px;
+    background-color: purple;
+    border: 10px solid orchid;
+}
+.box-line{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+}
+.box-container{
+    background-color: rgba(125, 46, 46, 0.853);
+    width: 450px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 table{
     border-collapse: collapse;
     margin: auto;
