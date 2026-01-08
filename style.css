@@ -8,7 +8,7 @@ a{
 }
 
 body{
-    background-image: url(image/nature.webp);
+    background-image: url(image/fond.webp);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -32,7 +32,7 @@ body{
 }
 
 ul li {
-    padding: 30px;
+    padding: 3px;
     list-style-type: none;
 }
 
@@ -61,62 +61,7 @@ h1{
 .tortue{
     background-color: burlywood;
 }
-/* 
-.banderole{
-    display: flex;
-    justify-content: center;
-}
-.totem{
-    display: flex;
-    justify-content: center;
-}
 
-.bleu{
-    display: flex;
-    flex-direction: row-reverse;
-}
-.rouge{
-    display: flex;
-    justify-content: space-around;
-}
-}
-.jour{
-   border: 1px solid black;
-   background-color: aqua;
-   width: 150px;
-   height: 150px;
-   justify-content: space-around;
-}
-
-.bonjour{
-    border: 1px solid black;
-    background-color: aqua;
-    width: 150px;
-    height: 150px;
-    justify-content: flex-start;
-}
-
-.buenos{
-    border: 1px solid black;
-    background-color: rgb(255, 0, 187);
-    width: 150px;
-    height: 150px;
-    justify-content: space-around;
-}
-
-.guten{
-    border: 1px solid greenyellow;background-color: rgb(255, 0, 0);
-    width: 150px;
-    height: 150px;
-    justify-content: space-around;
-}
-
-.good{
-    border: 1px solid greenyellow;background-color: rgb(255, 0, 0);
-    width: 150px;
-    height: 150px;
-    justify-content: space-around;
-} */
 .box-green{
     width: 150px;
     height: 150px;
