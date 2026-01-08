@@ -40,8 +40,16 @@
       <h1>Hello</h1>
       
       <p><strong>Bonjour</strong> <em>comment</em><mark>vas tu ?</mark></p>
+
       <a href="https://github.com/" target="_blank">Github</a>
-      <img src="image/lapin.webp" alt="lapin">
+
+      <div class="container">
+        <div class="bloc">
+          <img class="lapin" src="image/lapin.webp" alt="lapin">
+          <div class="text1">Lapin</div>
+      </div>
+      </div>
+
       <ul> <!--liste non ordonnée-->
         <li>a</li>
         <li>b</li>
@@ -58,27 +66,21 @@
         <li>k</li>
         <li>l</li>
       </ol>
+
       <table>
         <tr>
-        <th>carte
-            <td>
-              bonjour
-            </td>
-          </th>
-        <th>jeu
-            <td>
-              hello
-            </td>
-        </th>
+        <th>carte</th>
+        <th>jeu</th>
         </tr>
-          
+        <tr>
+          <td>jour</td>
+          <td>bonjour</td>
+        </tr>
       </table>
+
       <button>appuyer</button>
 
-      <div class="go"><h2>coucou</h2>
-        <a href="bidule"></a>
-      <p>bonjour</p>
-    </div>
+
 
       <div class="ninja">
         <p>blabla </p>
@@ -135,6 +137,46 @@
         </div>
       </section>
 
+
+      <section>
+        <div class="section">
+          <img class="imageTest" src="image/fleurs.jpg" alt="">
+          <p class="petit-texte">Voici une image</p>
+          <!--Checkbox caché-->
+          <input type="checkbox" id="toggle-desc" class="toggle-desc">
+          <label for="toggle-desc" class="arrow-container">
+            <span class="arrow-down">&darr;voir plus</span>
+          </label>
+          <div class="description-box">
+            <p class="textBoxBlack"> Voici un long texte Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde fugit nulla facere quis expedita deleniti sed repellat illo fuga necessitatibus molestias culpa numquam saepe iure quo, dolores autem eaque cupiditate maxime odit veniam possimus. Soluta in voluptatibus aut possimus temporibus voluptate quos doloribus, quas ab non. Nam quidem consequuntur delectus.</p>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img class="logo" src="image/MainBefore.jpg" alt="Logo">
+        </div>
+        <nav class="footer-nav">
+          <ul class="footer-links">
+            <li><a href="#">Mentions Légales</a></li>
+            <li><a href="#">Confidentialité</a></li>
+            <li><a href="link/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">&copy; 2026 Disney - Tous droits réservés</p>
+      </div>
+    </footer>
   </body>
 </html>
