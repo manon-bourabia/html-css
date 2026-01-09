@@ -1,11 +1,12 @@
 :root{
     --bg-color:#f4eeee;
-    --text-color:black;
+    --text-color: #333;
     --card-bg: #f9f9f9;
-    --accent-color: #6c3;
+    --accent-color: #6c3cff;
 
     --primary: #f3f4f3;
-    --secondary:#f3f
+    --secondary:#f6f5
+    --stylePrimary: display : flex, justify-content: center;
 }
 
 *{
@@ -48,22 +49,25 @@ a:link{color: rgb(204, 128, 174);}
     justify-content: space-around;
 }
 
-.fade-in{
-    width: 500px;
-    margin-top: 0 auto;
-    opacity: 0;
-    transform: translateY(100px);
-    animation: fadeInMove 3s ease-out forwards;
+.fade-in {
+  width: 500px;
+  margin-top: 10em;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(100px);
+  animation: fadeInMove 3s ease-out forwards;
 }
-.fadeinColor{
-    color: rgb(177, 33, 33);
+.fadeinColor {
+  color: rgb(226, 33, 33);
 }
-@keyframes fadeinMove{
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+
+@keyframes fadeInMove {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 ul li {
     padding: 3px;
     list-style-type: none;
