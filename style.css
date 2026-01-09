@@ -1,3 +1,13 @@
+:root{
+    --bg-color:#f4eeee;
+    --text-color:black;
+    --card-bg: #f9f9f9;
+    --accent-color: #6c3;
+
+    --primary: #f3f4f3;
+    --secondary:#f3f
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -38,6 +48,22 @@ a:link{color: rgb(204, 128, 174);}
     justify-content: space-around;
 }
 
+.fade-in{
+    width: 500px;
+    margin-top: 0 auto;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeInMove 3s ease-out forwards;
+}
+.fadeinColor{
+    color: rgb(177, 33, 33);
+}
+@keyframes fadeinMove{
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 ul li {
     padding: 3px;
     list-style-type: none;
@@ -297,7 +323,103 @@ tr{
 .toggle-desc:checked ~ .arrow-container .arrow-down {
  transform: rotate(180deg);
  transform: scale(1.5); /*agrandit la fleche et le texte */
-} 
+}
+
+.demo-section{
+    padding: 50px;
+    text-align: center;
+    background-color: var(--card-bg);
+}
+.btn-intro{
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #a891ee;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    animation: slideUpFade 1s ease-out;
+}
+@keyframes slideUpFade {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.links-container{
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.links-container a{
+    text-decoration: none;
+    font-weight: bold; /*bold = ecrire en gras*/
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+.hover-color{
+    color: #3c9dfb;
+    padding: 5px 10px;
+}
+.hover-color:hover{
+    background-color: #3c9dfb;
+    color: white;
+    border-radius: 5px;
+}
+.hover-grow{
+    color: #e74c3c;
+    display: inline-block;
+}
+.hover-grow:hover{
+    transform: scale(1.2) rotate(5deg);
+}
+
+.hover-underline{
+    color: var(--text-color);
+    position: relative;
+}
+.hover-underline::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #2ebf91;
+    transition: all 0.5s ease;
+}
+.hover-underline:hover::after{
+    width: 100%;
+    left: 0;
+}
+.hover-glow{
+    color: #ffa500;
+    border: 1px solid #ffa500;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+.hover-glow:hover{
+    box-shadow: 0 0 15px #ffa500;
+    background-color: rgba(255,165,0,0.1);
+}
+
+.hover-reveal::before{
+    content: '🚀';
+    opacity: 0;
+    margin-left: -25px;
+    transition: 0.3s;
+}
+.hover-reveal:hover::before{
+    opacity: 1;
+    margin-left: 0;
+}
+
 footer{
     background-color: #e9dddd;
     background-color: white;
