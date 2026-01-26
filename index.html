@@ -331,8 +331,95 @@
         </div>
       </div>
     </section>
+    <!-- <script>
+      let userInput = prompt("Dis-moi quelque chose (Deux réponses possible, Bonjour ou Tu vas bien?)")
+        if (userInput.toLowerCase() === "bonjour"){
+          alert("Bonjour à toi !");
+        } else if(userInput.toLowerCase() === "tu vas bien?"){
+            alert("Bien, et toi?");
+        } else {
+            alert("Désolé, je n'ai pas compris ...");
+        }
+    </script> -->
 
-    <script>
+    <!-- <script>
+      let userInput = prompt("Dis moi Bonjour");
+      if (userInput == "bonjour") {
+        let userInput2 = prompt("Bonjour ! ça va ? répond moi oui si tu vas bien");
+        if (userInput2 == "oui") {
+          alert ("Je suis content pour toi");
+        } else {
+          alert("Désolé, je dois filer....")
+        }
+      }
+    </script> -->
+    <!-- <script>
+      let userInput = prompt("Bonjour, comment tu vas ?");
+        if (userInput == "Bonjour, ça va et toi?"){
+        let sonPrenom = prompt("trés bien merci, Quel est ton prénom ?");
+        let sonAge = prompt("Super " + sonPrenom + "! Quel âge as-tu?");
+        let wEat = prompt("Ok, " + sonPrenom + " Tu veux manger des pâtes ou de la purée?");
+          if (wEat == "pates"){
+            let eatPasta = prompt("Ok, tu prefere bolognaise ou carbonara ?");
+            if (eatPasta == "carbonara"){
+              let dessert = prompt("Ok, " + sonPrenom + " je te prépare ça ! Tu voudras du fromage ou un yaourt apres ?");
+            } else {
+              alert("Ok " + sonPrenom + " Je te prepare ça !");
+            }
+          } else {
+            alert("Ok " + sonPrenom + " Je te prépare ça !");
+          }
+        }else {
+            let sonPrenom = prompt("T'es pas poli toi !");
+        }
+    </script> -->
+
+<!-- <script>
+  for (let monNombre = 1; monNombre <= 1000; monNombre ++){
+    console.log(monNombre);
+}
+</script>
+<script>
+console.log('on va boucler');
+for ( let i = 0; i < 4; i++ ) {
+  console.log('i', i < 4);
+}
+console.log('on a fini de boucler');
+</script> -->
+<!-- <script>
+  for (let i= 1; i < 200; i++){
+    if (i % 3 === 0 && i % 5 === 0){
+      console.log("FizzBuzz");
+    } 
+    else if (i % 3 === 0) {
+      console.log("Fizz"); 
+    }
+    else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }  
+</script> -->
+<script>
+  secretNumber = Math.floor(Math.random() * 100);
+  console.log("Le nombre secret est :", secretNumber)
+    for (let i = 0; i < 10; i++) {
+      let guess = prompt("Entrez un nombre entre 0 et 100:");
+    
+      if (guess == secretNumber){
+        alert("Bravo ! Vous avez trouvez le bon nombre !");
+       
+      }
+      else if (guess < secretNumber){
+        alert("Plus grand");
+      }
+      else if (guess > secretNumber);{
+        alert("Plus petit");
+      }
+    }
+</script>
+    <!-- <script>
         Swal.fire({
           title: "Submit your Github username",
           input: "text",
@@ -369,7 +456,7 @@
             });
           }
         });
-    </script>
+    </script> -->
 </body>
   </body>
 </html>
