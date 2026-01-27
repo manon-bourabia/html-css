@@ -500,23 +500,50 @@ console.log('on a fini de boucler');
     // </script> -->
 
     <script>
-      function comparer(choix1, choix2){
+      let choix1 = Math.random();
+      if (choix1 < 0.33){
+        choix1 = "pierre";
+      }else if (choix1 <0.66){
+        choix1 = "feuille";
+      }else {
+        choix1 = "ciseaux";
+      }
+      let choix2 = prompt("Choisissez entre pierre, feuille ou ciseaux :");
+      function comparer(){
           if (choix1 === choix2){
             return "égalité";
           }
-          if (choix1 === "pierre"){
-            if (choix2 === "ciseaux")
-            return "pierre"
+          else if (choix1 === "pierre"){
+            if (choix2 === "ciseaux"){
+              return alert("perdu");
+            }else{
+              return alert("gagné");
+            }
           }
-          if (choix1 === "feuille"){
-            if (choix2 === "pierre")
-            return "feuille"
+          else if (choix1 === "feuille"){
+            if (choix2 === "pierre"){
+             return alert("gagné");
+            }else{
+              return alert("perdu");
+            } 
           }
-          if (choix1 === "ciseaux"){
-            if (choix2 === "feuille")
-            return "ciseaux"
+          else if (choix1 === "ciseaux"){
+            if (choix2 === "feuille"){
+              return alert("gagné");
+            }else {
+              return alert("perdu");
+            }
           }
-        }
+      }
+      console.log(comparer(choix1, choix2));
+
+      function game(){
+        for(let i = 1; i < 1; i++);
+        let choix2 = prompt("Choisissez entre pierre, feuille ou ciseaux :");
+        
+      }
+
+
     </script>
 </body>
   </body>
