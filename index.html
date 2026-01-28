@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--Déclare que le document est en HTML5-->
 <html lang="fr">
   <!--l'élément racine qui englobe tout-->
@@ -9,52 +9,88 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <!--changer le format-->
     <title>Hello world</title>
-    <link rel="icon" type="image/webp" href="image/logopage.webp">
+    <link rel="icon" type="image/webp" href="image/logopage.webp" />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
     <header>
-     <div class="myheader">
-            <div>
-                <img class="logo" src="image/MainBefore.jpg" alt="logo">
-            </div>
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
-              <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
+      <div class="myheader">
+        <div>
+          <img class="logo" src="image/MainBefore.jpg" alt="logo" />
+        </div>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Accueil</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Produits</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="link/contact.html"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Contact
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="link/contact.html"
+                        >Localisation</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="link/contact.html"
+                        >Formulaire de contact</a
+                      >
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <button class="btn btn-outline-success" type="submit">
+                  Search
                 </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Produits</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="link/contact.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Contact
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="link/contact.html">Localisation</a></li>
-                      <li><a class="dropdown-item" href="link/contact.html">Formulaire de contact</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-              </div>
-              </div>
-            </nav>
+              </form>
+            </div>
+          </div>
+        </nav>
         <!-- <nav>
           <ul class="liens">
             <li><a href="#">accueil</a></li>
@@ -64,9 +100,6 @@
           </ul>
         </nav> -->
       </div>
-        
-      </div>
-    </div>
     </header>
 
     <main>
@@ -76,55 +109,88 @@
       <a href="https://github.com/" target="_blank">Github</a>
       <div class="container">
         <div class="bloc">
-          <img class="lapin" src="image/lapin.webp" alt="lapin">
+          <img class="lapin" src="image/lapin.webp" alt="lapin" />
           <div class="text1">Lapin</div>
         </div>
       </div>
       <section id="fadein-section" class="fade-in">
         <h2 class="fadeinColor">Section animée en fade-in</h2>
-        <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
+        <p class="fadeinColor">
+          Ce contenu apparaît en fondu grâce à une animation CSS.
+        </p>
       </section>
-      
+
       <div id="carouselExampleDark" class="carousel carousel-dark slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="image/lapin.webp" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="image/lapin.webp" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="image/lap1.webp" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="image/MainBefore.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="image/lap1.webp" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="image/MainBefore.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-
-
 
       <!-- <ul> liste non ordonnée
         <li>a</li>
@@ -153,75 +219,121 @@
           <td>bonjour</td>
         </tr>
       </table> -->
-     
 
-      <a href="link/twitter.html" class="btn btn-info disabled" tabindex="-1" role="button" aria-disabled="true">Push</a>
+      <a
+        href="link/twitter.html"
+        class="btn btn-info disabled"
+        tabindex="-1"
+        role="button"
+        aria-disabled="true"
+        >Push</a
+      >
 
       <div class="row">
         <div class="col">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First name"
+            aria-label="First name"
+          />
         </div>
         <div class="col">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last name"
+            aria-label="Last name"
+          />
         </div>
       </div>
       <section class="toto">
-        <div class="carousel" id="carouselExampleIndicators" class="carousel slide">
+        <div
+          class="carousel"
+          id="carouselExampleIndicators"
+          class="carousel slide"
+        >
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="lap1" src="image/lap1.webp" class="d-block w-100" alt="...">
+              <img
+                class="lap1"
+                src="image/lap1.webp"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img class="lapin" src="image/lapin.webp" class="d-block w-100" alt="...">
+              <img
+                class="lapin"
+                src="image/lapin.webp"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
             <div class="carousel-item">
-              <img class="nature" src="image/nature.webp" class="d-block w-100" alt="...">
+              <img
+                class="nature"
+                src="image/nature.webp"
+                class="d-block w-100"
+                alt="..."
+              />
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-         </button>
-      </div>
-    </section>
-
-
-      <!-- <div class="ninja">
-        <p>blabla </p>
-        <br>
-        <p>blibli</p>
-        <br>
-      </div>
-
-      <div class="tortue">
-        <p>
-  youyouy
-        </p>
-      </div> -->
+          </button>
+        </div>
+      </section>
 
       <section class="box-container">
-        
-          <div class="box-line">
-            <div class="box-green"></div>
-            <div class="box-green"></div>
-          </div>
+        <div class="box-line">
+          <div class="box-green"></div>
+          <div class="box-green"></div>
+        </div>
 
-          <div class="box-blue"></div>
-        
-          <div class="box-line">
-            <div class="box-purple"></div>
-            <div class="box-purple"></div>
-          </div>
-       
+        <div class="box-blue"></div>
+
+        <div class="box-line">
+          <div class="box-purple"></div>
+          <div class="box-purple"></div>
+        </div>
       </section>
 
       <section>
@@ -250,18 +362,24 @@
         </div>
       </section>
 
-
       <section>
         <div class="section">
-          <img class="imageTest" src="image/fleurs.jpg" alt="">
+          <img class="imageTest" src="image/fleurs.jpg" alt="" />
           <p class="petit-texte">Voici une image</p>
           <!--Checkbox caché-->
-          <input type="checkbox" id="toggle-desc" class="toggle-desc">
+          <input type="checkbox" id="toggle-desc" class="toggle-desc" />
           <label for="toggle-desc" class="arrow-container">
             <span class="arrow-down">&darr;voir plus</span>
           </label>
           <div class="description-box">
-            <p class="textBoxBlack"> Voici un long texte Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde fugit nulla facere quis expedita deleniti sed repellat illo fuga necessitatibus molestias culpa numquam saepe iure quo, dolores autem eaque cupiditate maxime odit veniam possimus. Soluta in voluptatibus aut possimus temporibus voluptate quos doloribus, quas ab non. Nam quidem consequuntur delectus.</p>
+            <p class="textBoxBlack">
+              Voici un long texte Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Unde fugit nulla facere quis expedita deleniti
+              sed repellat illo fuga necessitatibus molestias culpa numquam
+              saepe iure quo, dolores autem eaque cupiditate maxime odit veniam
+              possimus. Soluta in voluptatibus aut possimus temporibus voluptate
+              quos doloribus, quas ab non. Nam quidem consequuntur delectus.
+            </p>
           </div>
         </div>
       </section>
@@ -277,12 +395,12 @@
         <a href="#" class="hover-reveal">Apparition d'icône</a>
       </div>
     </section>
-    
-<!--Création d'un Footer-->
+
+    <!--Création d'un Footer-->
     <footer>
       <div class="footer-content">
         <div class="footer-logo">
-          <img class="logo" src="image/MainBefore.jpg" alt="Logo">
+          <img class="logo" src="image/MainBefore.jpg" alt="Logo" />
         </div>
         <nav class="footer-nav">
           <ul class="footer-links">
@@ -293,9 +411,24 @@
         </nav>
 
         <div class="footer-socials">
-          <a href="link/facebook.html" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-          <a href="link/instagram.html" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-          <a href="link/twitter.html" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+          <a href="link/facebook.html" aria-label="Facebook"
+            ><i class="fa-brands fa-facebook"></i></a
+          ><link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+          <a href="link/instagram.html" aria-label="Instagram"
+            ><i class="fa-brands fa-instagram"></i></a
+          ><link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
+          <a href="link/twitter.html" aria-label="Twitter"
+            ><i class="fa-brands fa-twitter"></i></a
+          ><link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          />
         </div>
       </div>
 
@@ -303,31 +436,36 @@
         <p class="copyright">&copy; 2026 Disney - Tous droits réservés</p>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
 
-<!--Création d'une Modale-->
-  <section>
-    <a href="#modal1" class="btn-ouvrir">Ouvrir Modal</a>
+    <!--Création d'une Modale-->
+    <section>
+      <a href="#modal1" class="btn-ouvrir">Ouvrir Modal</a>
 
-    <div id="modal1" class="modal">
-      <a href="#" class="modal-overlay"></a>
-      <div class="modal-box">
-        <a href="#" class="close">&times;</a>
-        <div class="modal-content">
-          <h3>Test Modal</h3>
-          <p class="modal-text">Ouhhh La belle modal</p>
+      <div id="modal1" class="modal">
+        <a href="#" class="modal-overlay"></a>
+        <div class="modal-box">
+          <a href="#" class="close">&times;</a>
+          <div class="modal-content">
+            <h3>Test Modal</h3>
+            <p class="modal-text">Ouhhh La belle modal</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-<!--Création d'une Alerte-->
+    </section>
+    <!--Création d'une Alerte-->
     <section>
-      <input type="checkbox" id="alert-toggle">
+      <input type="checkbox" id="alert-toggle" />
       <label for="alert-toggle" class="alert-btn">Cliquez pour alerte</label>
-      <div class="alert-overlay"> 
+      <div class="alert-overlay">
         <div class="alert-box">
           <label for="alert-toggle" class="close">&times;</label>
-          <strong>Attention</strong><br>Premiere alerte personnalisée en HTML/CSS.
+          <strong>Attention</strong><br />Premiere alerte personnalisée en
+          HTML/CSS.
         </div>
       </div>
     </section>
@@ -375,13 +513,13 @@
                 let sonPrenom = prompt("T'es pas poli toi !");
             }
     </script> -->
-<!--CREATION DE VARIABLE-->
+    <!--CREATION DE VARIABLE-->
     <!-- <script>
       for (let monNombre = 1; monNombre <= 1000; monNombre ++){
         console.log(monNombre);
     }
     </script> -->
-<!----LES BOUCLES---->
+    <!----LES BOUCLES---->
     <!-- <script>
       for (let i= 1; i < 200; i++){
         if (i % 3 === 0 && i % 5 === 0){
@@ -422,7 +560,7 @@
       let resultat = multiplierParDeux(3); 
       console.log(resultat)
     </script> -->
-<!---------LES FONCTIONS-------------->
+    <!---------LES FONCTIONS-------------->
     <!-- <script>
       function diviserParDeux(nombre){
         return nombre / 2;
@@ -543,35 +681,32 @@
     </script> -->
     <!------------LES TABLEAUX--------------------->
     <!---Calendrier-->
+    <!----Exo épicerie -->
     <!-- <script>
-      let jours = ['lun','007','mer','jeu','ven','sam','BUG'];
-      jours.pop();
-      console.log(jours);
-      jours.push('dim');
-      console.log(jours);
-      jours[1] = 'mar';
-      console.log(jours);
-      jours.length;
-      console.log(jours.length)
-      console.log(jours[2])
-    </script> -->
-    <!----Exo épicerie-->
-    <script>
-      var fruits = ['Mangue','Raisin','Figue','Kiwi.'];
-      var reponse = prompt('Quel fruit désirez vous ? '+ fruits);
-      var index = fruits.indexOf(reponse);
-      if (index !== '-1'){
-        fruits.splice(index,1);
+      var fruits = ["Mangue", "Raisin", "Figue", "Kiwi"];
+      var reponse = prompt("Quel fruit désirez vous ? " + fruits);
+      var choix = fruits.indexOf(reponse);
+      if (choix !== -1) {
+        fruits.splice(choix, 1);
         alert("Ok!" + fruits);
-      }else{
-        alert('Indisponible')
+      } else {
+        alert("Indisponible");
       }
-    </script>
-<!----Jeu du pendu------>
+    </script> -->
+    <!----Jeu du pendu------>
     <script>
       var mauvaisesLettres = [];
-      var lettresAttendues = ['s','u','p','e','r'];
+      var lettresAttendues = ["s", "u", "p", "e", "r"];
+
+      var tentative = prompt("Proposez une lettre: ");
+      var lettre = lettresAttendues.indexOf(tentative);
+      if (lettre !== -1){
+        lettresAttendues.splice(lettre,1);
+        alert("Bien joué ! Il reste " + lettresAttendues.length + " lettres à trouver.");
+      }else {
+        mauvaisesLettres.push(tentative);
+        alert("Raté .... Erreurs : " + mauvaisesLettres.length + "/10");
+      }
     </script>
-      
   </body>
 </html>
