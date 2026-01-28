@@ -331,6 +331,8 @@
         </div>
       </div>
     </section>
+    <!-------------------START JavaScript--------------------------->
+    <!--CHATBOT Exo-->
     <!-- <script>
       let userInput = prompt("Dis-moi quelque chose (Deux réponses possible, Bonjour ou Tu vas bien?)")
         if (userInput.toLowerCase() === "bonjour"){
@@ -373,13 +375,14 @@
             let sonPrenom = prompt("T'es pas poli toi !");
         }
     </script> -->
-
+<!--CREATION DE VARIABLE-->
 <!-- <script>
   for (let monNombre = 1; monNombre <= 1000; monNombre ++){
     console.log(monNombre);
 }
 </script>
-<script>
+<!--LES BOUCLES-->
+<!-- <script>
 console.log('on va boucler');
 for ( let i = 0; i < 4; i++ ) {
   console.log('i', i < 4);
@@ -408,11 +411,12 @@ console.log('on a fini de boucler');
       let guess = prompt("Entrez un nombre entre 0 et 100:");
       if (guess == secretNumber){
         alert("Bravo ! Vous avez trouvez le bon nombre !");
+        return;
       }
       else if (guess < secretNumber){
         alert("Plus grand");
       }
-      else if (guess > secretNumber);{
+      else {
         alert("Plus petit");
       }
     }
@@ -498,53 +502,87 @@ console.log('on a fini de boucler');
     //   }
     //   console.log(factorielle(0), factorielle(1), factorielle(3), factorielle(4));
     // </script> -->
-
-    <script>
-      let choix1 = Math.random();
-      if (choix1 < 0.33){
-        choix1 = "pierre";
-      }else if (choix1 <0.66){
-        choix1 = "feuille";
-      }else {
-        choix1 = "ciseaux";
-      }
-      let choix2 = prompt("Choisissez entre pierre, feuille ou ciseaux :");
-      function comparer(){
-          if (choix1 === choix2){
-            return "égalité";
-          }
-          else if (choix1 === "pierre"){
-            if (choix2 === "ciseaux"){
-              return alert("perdu");
-            }else{
-              return alert("gagné");
+    <!-- <script>
+          function comparer(choixOrdi, choixUtilisateur){
+            if (choixOrdi === choixUtilisateur){
+              return console.log("égalité");
+            }
+            else if (choixOrdi === "pierre"){
+              if (choixUtilisateur === "ciseaux"){
+                return "Ordi";
+              }else{
+                return "Joueur";
+              }
+            }
+            else if (choixOrdi === "feuille"){
+              if (choixUtilisateur === "pierre"){
+              return "Ordi";
+              }else{
+                return "Joueur";
+              } 
+            }
+            else if (choixOrdi === "ciseaux"){
+              if (choixUtilisateur === "feuille"){
+                return "Ordi";
+              }else {
+                return "Joueur";
+              }
             }
           }
-          else if (choix1 === "feuille"){
-            if (choix2 === "pierre"){
-             return alert("gagné");
-            }else{
-              return alert("perdu");
+          function game(){
+            let scoreOrdi = 0;
+            let scoreUtilisateur = 0;
+            for(let i = 0; i < 3; i++){
+              let choixOrdi = Math.random();
+              if (choixOrdi < 0.33){
+                choixOrdi = "pierre";
+              }else if (choixOrdi <0.66){
+                choixOrdi = "feuille";
+              }else {
+                choixOrdi = "ciseaux";
+              }
+              let choixUtilisateur = prompt("Choisissez entre pierre, feuille ou ciseaux :");
+              let result = comparer(choixOrdi, choixUtilisateur);
+              console.log(result)
+              if (result === "Ordi"){
+                scoreOrdi++;
+              }else {(result === "Joueur")
+                scoreUtilisateur++;
+              }
+              console.log(scoreOrdi,scoreUtilisateur);
             } 
           }
-          else if (choix1 === "ciseaux"){
-            if (choix2 === "feuille"){
-              return alert("gagné");
-            }else {
-              return alert("perdu");
-            }
-          }
+          game();
+    </script> -->
+    <script>
+      let pairs = 0;
+      let impairs = 0;
+      for (let i = 1; i <= 10; i++){
+        console.log(i);
+        if (i % 2 === 0){
+          pairs++;
+        }else {
+          impairs++;
+        }
       }
-      console.log(comparer(choix1, choix2));
-
-      function game(){
-        for(let i = 1; i < 3; i++);
-        
-        
-      }
-
-
+      console.log(`Il y a ${pairs} nombres pairs et ${impairs} nombres impairs`);
     </script>
+    <script>
+        for(let i = 1; i <= 5; i++){
+          console.log(`TABLE DE ${i}`);
+          for(let j = 1; j <= 10; j++){
+            let resultat = i * j;
+            if (resultat > 30){
+              console.log(`GROS RESULTAT : ${i} x ${j} = ${resultat}`);
+            }else if (resultat % 5 === 0){
+              console.log(`Multiple de 5: ${i} x ${j} = ${resultat}`);  
+            }else{
+              console.log(`${i} x ${j} = ${resultat}`);
+            }
+        }
+      }
+          
+    </script>
+      
 </body>
-  </body>
 </html>
