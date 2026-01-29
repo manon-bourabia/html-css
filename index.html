@@ -599,59 +599,57 @@
     </script> -->
     <!----------CHIFOUMI----------->
     <!-- <script>
-          function comparer(choixOrdi, choixUtilisateur){
-            if (choixOrdi === choixUtilisateur){
-              return console.log("égalité");
-            }
-            else if (choixOrdi === "pierre"){
-              if (choixUtilisateur === "ciseaux"){
-                return "Ordi";
-              }else{
-                return "Joueur";
-              }
-            }
-            else if (choixOrdi === "feuille"){
-              if (choixUtilisateur === "pierre"){
-              return "Ordi";
-              }else{
-                return "Joueur";
-              } 
-            }
-            else if (choixOrdi === "ciseaux"){
-              if (choixUtilisateur === "feuille"){
-                return "Ordi";
-              }else {
-                return "Joueur";
-              }
-            }
+      function comparer(choixOrdi, choixUtilisateur){
+        if (choixOrdi === choixUtilisateur){
+          return console.log("égalité");
+        }
+        else if (choixOrdi === "pierre"){
+          if (choixUtilisateur === "ciseaux"){
+            return "Ordi";
+          }else{
+            return "Joueur";
           }
-          function game(){
-            let scoreOrdi = 0;
-            let scoreUtilisateur = 0;
-            for(let i = 0; i < 3; i++){
-              let choixOrdi = Math.random();
-              if (choixOrdi < 0.33){
-                choixOrdi = "pierre";
-              }else if (choixOrdi <0.66){
-                choixOrdi = "feuille";
-              }else {
-                choixOrdi = "ciseaux";
-              }
-              let choixUtilisateur = prompt("Choisissez entre pierre, feuille ou ciseaux :");
-              let result = comparer(choixOrdi, choixUtilisateur);
-              console.log(result)
-              if (result === "Ordi"){
-                scoreOrdi++;
-              }else {(result === "Joueur")
-                scoreUtilisateur++;
-              }
-              console.log(scoreOrdi,scoreUtilisateur);
-            } 
+        }else if (choixOrdi === "feuille"){
+          if (choixUtilisateur === "pierre"){
+          return "Ordi";
+          }else{
+            return "Joueur";
+          } 
+        }else if (choixOrdi === "ciseaux"){
+          if (choixUtilisateur === "feuille"){
+            return "Ordi";
+          }else {
+            return "Joueur";
           }
-          game();
-    </script>
+        }
+      }
+      function game(){
+        let scoreOrdi = 0;
+        let scoreUtilisateur = 0;
+        for(let i = 0; i < 3; i++){
+          let choixOrdi = Math.random();
+          if (choixOrdi < 0.33){
+            choixOrdi = "pierre";
+          }else if (choixOrdi <0.66){
+            choixOrdi = "feuille";
+          }else {
+            choixOrdi = "ciseaux";
+          }
+          let choixUtilisateur = prompt("Choisissez entre pierre, feuille ou ciseaux :");
+          let result = comparer(choixOrdi, choixUtilisateur);
+          console.log(result)
+          if (result === "Ordi"){
+            scoreOrdi++;
+          }else {(result === "Joueur")
+            scoreUtilisateur++;
+          }
+          console.log(scoreOrdi,scoreUtilisateur);
+        } 
+      }
+      game();
+    </script> -->
 
-    <script>
+    <!-- <script>
       let pairs = 0;
       let impairs = 0;
       for (let i = 1; i <= 10; i++){
@@ -663,8 +661,8 @@
         }
       }
       console.log(`Il y a ${pairs} nombres pairs et ${impairs} nombres impairs`);
-    </script>
-    <script>
+    </script> -->
+    <!-- <script>
         for(let i = 1; i <= 5; i++){
           console.log(`TABLE DE ${i}`);
           for(let j = 1; j <= 10; j++){
@@ -697,22 +695,30 @@
     <script>
       function gamePendu() {
         let mauvaisesLettres = [];
-        let lettresAttendues = ["s", "u", "p", "e", "r"];
-        
+        let lettresAttendues = ["m", "a", "m", "a", "n"];
+
         for (let i = 1; i <= 10; i++) {
           let tentative = prompt("Proposez une lettre: ");
           let lettre = lettresAttendues.indexOf(tentative);
           if (lettre !== -1) {
+            for (let j = lettresAttendues.length - 1; j >= 0; j--){
+              if (lettresAttendues[j] === tentative){
+                lettresAttendues.splice(j,1);
+              }
+            }
             lettresAttendues.splice(lettre, 1);
-            alert("Bien joué ! Il reste " + lettresAttendues.length +" lettres à trouver.");
+            alert("Bien joué ! Il reste " + lettresAttendues.length + " lettres à trouver.");
           } else {
             mauvaisesLettres.push(tentative);
             alert("Raté ! Erreurs : " + mauvaisesLettres.length + "/10");
           }
           if (lettresAttendues.length === 0) {
             alert("Bravo !");
-          } if(mauvaisesLettres === 10) {
+            break;
+          }
+          if (mauvaisesLettres === 10) {
             alert("Perdu ...");
+            break;
           }
         }
       }
