@@ -494,24 +494,24 @@
       }
     </script>
     <script>
-          let userInput = prompt("Bonjour, comment tu vas ?");
-            if (userInput == "Bonjour, ça va et toi?"){
-            let sonPrenom = prompt("trés bien merci, Quel est ton prénom ?");
-            let sonAge = prompt("Super " + sonPrenom + "! Quel âge as-tu?");
-            let wEat = prompt("Ok, " + sonPrenom + " Tu veux manger des pâtes ou de la purée?");
-              if (wEat == "pates"){
-                let eatPasta = prompt("Ok, tu prefere bolognaise ou carbonara ?");
-                if (eatPasta == "carbonara"){
-                  let dessert = prompt("Ok, " + sonPrenom + " je te prépare ça ! Tu voudras du fromage ou un yaourt apres ?");
-                } else {
-                  alert("Ok " + sonPrenom + " Je te prepare ça !");
-                }
-              } else {
-                alert("Ok " + sonPrenom + " Je te prépare ça !");
-              }
-            }else {
-                let sonPrenom = prompt("T'es pas poli toi !");
+      let userInput = prompt("Bonjour, comment tu vas ?");
+        if (userInput == "Bonjour, ça va et toi?"){
+        let sonPrenom = prompt("trés bien merci, Quel est ton prénom ?");
+        let sonAge = prompt("Super " + sonPrenom + "! Quel âge as-tu?");
+        let wEat = prompt("Ok, " + sonPrenom + " Tu veux manger des pâtes ou de la purée?");
+          if (wEat == "pates"){
+            let eatPasta = prompt("Ok, tu prefere bolognaise ou carbonara ?");
+            if (eatPasta == "carbonara"){
+              let dessert = prompt("Ok, " + sonPrenom + " je te prépare ça ! Tu voudras du fromage ou un yaourt apres ?");
+            } else {
+              alert("Ok " + sonPrenom + " Je te prepare ça !");
             }
+          } else {
+            alert("Ok " + sonPrenom + " Je te prépare ça !");
+          }
+        }else {
+            let sonPrenom = prompt("T'es pas poli toi !");
+        }
     </script> -->
     <!--CREATION DE VARIABLE-->
     <!-- <script>
@@ -695,18 +695,28 @@
     </script> -->
     <!----Jeu du pendu------>
     <script>
-      var mauvaisesLettres = [];
-      var lettresAttendues = ["s", "u", "p", "e", "r"];
-
-      var tentative = prompt("Proposez une lettre: ");
-      var lettre = lettresAttendues.indexOf(tentative);
-      if (lettre !== -1){
-        lettresAttendues.splice(lettre,1);
-        alert("Bien joué ! Il reste " + lettresAttendues.length + " lettres à trouver.");
-      }else {
-        mauvaisesLettres.push(tentative);
-        alert("Raté .... Erreurs : " + mauvaisesLettres.length + "/10");
+      function gamePendu() {
+        let mauvaisesLettres = [];
+        let lettresAttendues = ["s", "u", "p", "e", "r"];
+        
+        for (let i = 1; i <= 10; i++) {
+          let tentative = prompt("Proposez une lettre: ");
+          let lettre = lettresAttendues.indexOf(tentative);
+          if (lettre !== -1) {
+            lettresAttendues.splice(lettre, 1);
+            alert("Bien joué ! Il reste " + lettresAttendues.length +" lettres à trouver.");
+          } else {
+            mauvaisesLettres.push(tentative);
+            alert("Raté ! Erreurs : " + mauvaisesLettres.length + "/10");
+          }
+          if (lettresAttendues.length === 0) {
+            alert("Bravo !");
+          } if(mauvaisesLettres === 10) {
+            alert("Perdu ...");
+          }
+        }
       }
+      gamePendu();
     </script>
   </body>
 </html>
