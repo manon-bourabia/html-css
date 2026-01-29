@@ -696,32 +696,35 @@
       function gamePendu() {
         let mauvaisesLettres = [];
         let lettresAttendues = ["m", "a", "m", "a", "n"];
+        let lettresTrouvées = "";
 
         for (let i = 1; i <= 10; i++) {
           let tentative = prompt("Proposez une lettre: ");
-          let lettre = lettresAttendues.indexOf(tentative);
-          if (lettre !== -1) {
-            for (let j = lettresAttendues.length - 1; j >= 0; j--){
-              if (lettresAttendues[j] === tentative){
-                lettresAttendues.splice(j,1);
-              }
+          if (lettresAttendues.indexOf(tentative) !== -1) {
+            while (lettresAttendues.indexOf(tentative) !== -1) {
+              let lettre = lettresAttendues.indexOf(tentative);
+              lettresAttendues.splice(lettre, 1);
             }
-            lettresAttendues.splice(lettre, 1);
-            alert("Bien joué ! Il reste " + lettresAttendues.length + " lettres à trouver.");
+             lettresTrouvées += tentative;
+            alert(
+              "Bien joué ! Il reste " +
+                lettresAttendues.length +
+                " lettres à trouver.",
+            );
           } else {
             mauvaisesLettres.push(tentative);
             alert("Raté ! Erreurs : " + mauvaisesLettres.length + "/10");
           }
-          if (lettresAttendues.length === 0) {
-            alert("Bravo !");
-            break;
+           if (lettresAttendues.length === 0) {
+          alert("Bravo !");
+          return;
           }
-          if (mauvaisesLettres === 10) {
+          if (mauvaisesLettres.length >= 10) {
             alert("Perdu ...");
-            break;
           }
         }
       }
+
       gamePendu();
     </script>
   </body>
