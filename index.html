@@ -691,8 +691,8 @@
         alert("Indisponible");
       }
     </script> -->
-    <!----Jeu du pendu------>
-    <script>
+    <!-- --Jeu du pendu------>
+    <!-- <script>
       function gamePendu() {
         let mauvaisesLettres = [];
         let lettresAttendues = ["m", "a", "m", "a", "n"];
@@ -705,7 +705,7 @@
               let lettre = lettresAttendues.indexOf(tentative);
               lettresAttendues.splice(lettre, 1);
             }
-             lettresTrouvées += tentative;
+            lettresTrouvées += tentative;
             alert(
               "Bien joué ! Il reste " +
                 lettresAttendues.length +
@@ -715,9 +715,9 @@
             mauvaisesLettres.push(tentative);
             alert("Raté ! Erreurs : " + mauvaisesLettres.length + "/10");
           }
-           if (lettresAttendues.length === 0) {
-          alert("Bravo !");
-          return;
+          if (lettresAttendues.length === 0) {
+            alert("Bravo !");
+            return;
           }
           if (mauvaisesLettres.length >= 10) {
             alert("Perdu ...");
@@ -726,6 +726,34 @@
       }
 
       gamePendu();
+    </script> -->
+    <!------PLAYLIST------->
+    <!-- avoir une playlist qui va contenir plusieurs type de chanson, afficher la playlist et demander à l'utilisateur de rajouter un morceaux si la playlist est superieur a 10, il faut remplacer la deuxieme morceau si on veut et apres afficher la longueur de la liste plus de dernier morceau -->
+    <script>
+      function playlistSpotify() {
+        let playlist = [" Melodrama " , " I Just Might " , " Chanel " , " SPA "];
+        for(; ;) {
+          let music = "Playlist actuelle : \n\n" + playlist + "\n\n" + " Rajouter un morceau ? Si non écrivez stop. ";
+          let newSong = prompt(music);
+          if (newSong === "stop"){
+            break;
+          }
+          let replace = prompt("Remplacer le deuxième morceau ? Oui ou Non");
+          if (replace === "Oui") {
+            playlist.splice(1, 1, newSong);
+            alert("Nouvelle Playlist : " + playlist + "\n" + playlist.length);
+          }
+          if (replace === "Non"){
+            playlist.push(newSong);
+            alert("Nouvelle Playlist :" + playlist + "\n" + playlist.length);
+          }
+          if (playlist.length > 10) {
+            playlist.splice(0, 1);
+            alert("Seuil limite atteint ! Le premier morceau est supprimé.");
+          }
+          }
+        }
+      playlistSpotify()
     </script>
   </body>
 </html>
