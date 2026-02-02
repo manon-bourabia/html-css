@@ -729,7 +729,7 @@
     </script> -->
     <!------PLAYLIST------->
     <!-- avoir une playlist qui va contenir plusieurs type de chanson, afficher la playlist et demander à l'utilisateur de rajouter un morceaux si la playlist est superieur a 10, il faut remplacer la deuxieme morceau si on veut et apres afficher la longueur de la liste plus de dernier morceau -->
-    <script>
+    <!-- <script>
       function playlistSpotify() {
         let playlist = [" Melodrama " , " I Just Might " , " Chanel " , " SPA "];
         for(; ;) {
@@ -754,6 +754,43 @@
           }
         }
       playlistSpotify()
+    </script> -->
+    <script>
+      var annuaire = {
+        Sophie: '06 51 32 15 82',
+        Marie: '07 77 85 96 10',
+        Julie: '06 47 81 59 70'
+      };
+      for(;;){
+        let search = prompt("Quel fonction souhaitez-vous ?" + "\n\n" + "r : rechercher," + "\n" + "l : afficher la liste" + "\n" + "a : ajouter" + "\n" + "s : supprimer" + "\n" + "q : quitter");
+        if (search === 'r'){
+          let friendNumber = prompt('Quel numéro voulez-vous ?');
+          alert(friendNumber + " " + annuaire[friendNumber]);
+          for (var phoneNumber in annuaire){
+          console.log(`${phoneNumber}: ${annuaire[phoneNumber]}`);
+          }
+        }else if (search === 'l'){
+          alert('Voici votre liste de contact:');
+          for (var listNumber in annuaire){
+              alert(`${listNumber} : ${annuaire[listNumber]}`);
+          }
+        }else if (search === 'a'){
+          let addContact = prompt('Ajouter un contact : Tapez le nom');
+          let addNumber = prompt ('Tapez le numéro de téléphone :');
+          annuaire[addContact] = addNumber;
+          console.table(annuaire); 
+        }else if (search === 's'){
+          let DeleteContact = prompt ('Supprimer un contact :');
+          delete annuaire[DeleteContact];
+          console.log(annuaire); 
+        }else{
+          break;
+        }
+      }
+       
+      
+      
+      
     </script>
   </body>
 </html>
