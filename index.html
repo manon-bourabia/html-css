@@ -755,7 +755,7 @@
         }
       playlistSpotify()
     </script> -->
-    <script>
+    <!-- <script>
       var annuaire = {
         Sophie: '06 51 32 15 82',
         Marie: '07 77 85 96 10',
@@ -776,7 +776,7 @@
           }
         }else if (search === 'a'){
           let addContact = prompt('Ajouter un contact : Tapez le nom');
-          let addNumber = prompt ('Tapez le numéro de téléphone :');
+          let addNumber = prompt('Tapez le numéro de téléphone :');
           annuaire[addContact] = addNumber;
           console.table(annuaire); 
         }else if (search === 's'){
@@ -787,10 +787,22 @@
           break;
         }
       }
-       
-      
-      
-      
+    </script> -->
+    <script>
+      class Etudiant {
+        constructor(age, nom, formation){
+            this.age = age;
+            this.nom = nom;
+            this.formation = formation;
+            alert('Etudiant instancié');
+        }
+      }
+      var etudiant1 = new Etudiant (20, 'Marie', 'licence AES');
+      var etudiant2 = new Etudiant (25, 'Julie', 'licence LEA');
+
+      alert(etudiant1.nom + "\n" +  etudiant1.age + " ans." + "\n" + "Etude : " + etudiant1.formation);
+      alert(etudiant2.nom + "\n" + etudiant2.age + " ans. " +  "\n" + "Etude : " + etudiant1.formation);
     </script>
+    
   </body>
 </html>
