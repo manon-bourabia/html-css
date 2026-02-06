@@ -1,3 +1,55 @@
 .hidden{
     display:none;
 }
+.trafficLight{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100px;
+    height: 200px;
+    background-color: #111;
+    border-radius: 10px;
+}
+#redLight{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: #ff3b30;
+    box-shadow: 0 0 20px #ff3b30; */
+}
+#orangeLight{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* background-color: #ff8c00;
+    box-shadow: 0 0 20px #ff8c00; */
+
+}
+#greenLight{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    /* background-color: #0eec33;
+    box-shadow: 0 0 20px #4cd964; */
+}
+
+.modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background-color: #111;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.3 ease;
+}
+.modalContent{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    position: relative;
+    max-width: 500px;
+}

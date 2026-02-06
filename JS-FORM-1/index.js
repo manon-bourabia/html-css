@@ -3,7 +3,7 @@
 document.getElementById("my-bouton").onclick = function direBonjour() {
   alert("Hello !");
 };
-// Calculatrice
+// -------- Calculatrice
 document.getElementById("mon-bouton").onclick = function calculer() {
   let value1 = document.getElementById("premier-nombre").value;
   let value2 = document.getElementById("deuxieme-nombre").value;
@@ -54,9 +54,66 @@ for (let i = 0; i < paragraphes.length; i++) {
 //   // lit l'attribut actuel
 //   let srcActuelle = img.getAttribute('src');
 //   if (srcActuelle.includes('Chat')){
-//     img.setAttribute('src','image/');
+//     img.setAttribute('src','//image/fleurs.jpg');
 //   }else {
-//     img.setAttribute('src', 'image/');
+//     img.setAttribute('src', '//image/lapin.webp');
 //   }
 // }
 
+// function pairImpair(n){
+//   if (n%2 === 0){
+//     console.log(`${n} est un nombre pair`)
+//   }else{
+//     console.log(`${n} est un nombre impair`)
+//   }
+// }
+// pairImpair(7);
+
+// function pairImpairTernaire(n){
+//   return n %2 === 0;
+// }
+// console.log(pairImpairTernaire(56));
+
+// function palindrome(mot){
+//   return mot === mot.split("").reverse().join("");
+// }
+// userWord = prompt("rentrer un mot: ");
+// if (palindrome(userWord) === true){
+//   alert(`${userWord} n'est pas un palindrome`)
+
+//   palindrome("kayak")
+// }
+
+// function palindromeT(mot){
+//   return mot === mot.split("").reverse().join("");
+// }
+// userWordT = prompt("rentrer un mot: ");
+// let verification = (palindromeT(userWordT) === true) ? alert(`${userWordT} est un palindrome`): alert(`${userWordT} n'est pas un palindrome`);
+
+// palindrome("kayak")
+
+// ----------FEU TRICOLORE
+const redLight = document.getElementById("redLight");
+const orangeLight = document.getElementById("orangeLight");
+const greenLight = document.getElementById("greenLight");
+
+let change =0;
+
+setInterval(() => {
+  redLight.style.backgroundColor = "#ff3a3067";
+  orangeLight.style.backgroundColor = "#ff8c0016";
+  greenLight.style.backgroundColor = "#4cd9631e";
+
+  if (change === 0){
+    redLight.style.backgroundColor = "red"
+    change = 1;
+  }else if (change === 1){
+    orangeLight.style.backgroundColor = "orange"
+    change = 2
+  } else{ 
+    greenLight.style.backgroundColor = "green"
+    change = 0
+  }
+}, 1500);
+
+// ------------- MODALE

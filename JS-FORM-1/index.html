@@ -1,27 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="/JS-FORM-1/style.css" />
-</head>
-<body>
-     <form>
-        <label for="nom">Nom:</label>
-        <input id="nom" value="Jin" />
-        <label for="prenom">Prénom:</label>
-        <input id="prenom" value="Pad" />
+  </head>
+  <body>
+    <form>
+      <label for="nom">Nom:</label>
+      <input id="nom" value="Jin" />
+      <label for="prenom">Prénom:</label>
+      <input id="prenom" value="Pad" />
     </form>
     <button id="my-bouton">Click</button>
 
     <h2>Calculatrice</h2>
     <label for="calcul">Calcul</label>
-    <input type="number" id="premier-nombre">
+    <input type="number" id="premier-nombre" />
     <label for="number">+</label>
-    <input type="number" id="deuxieme-nombre">
+    <input type="number" id="deuxieme-nombre" />
     <label for="resultat">=</label>
-    <input type="text" id="resultat">
+    <input type="text" id="resultat" />
     <button id="mon-bouton">Calculer</button>
 
     <p id="premier">texte visible</p>
@@ -37,9 +37,22 @@
     <p id="premier">texte important</p>
     <p id="secondText">autre texte</p>
 
+    <div class="trafficLight">
+        <div id="greenLight"></div>
+        <div id="orangeLight"></div>
+        <div id="redLight"></div>
+    </div>
 
-
-
-</body>
-<script src="index.js"></script>
+    <section>
+      <button id="OpenModal">
+        Ouvrir la Modale
+      </button>
+      <div id="mymodal" class="modal">
+        <span class="closeBtn">&times;</span>
+        <h2>Titre de ma modale</h2>
+            <p class="modalText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam expedita rerum maiores hic nam, ad, cum ducimus voluptatum obcaecati labore minima accusamus ipsum similique quia cupiditate fugiat explicabo a nobis.</p>
+          </div>
+    </section>
+  </body>
+  <script src="index.js"></script>
 </html>
