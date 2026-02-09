@@ -117,3 +117,19 @@ setInterval(() => {
 }, 1500);
 
 // ------------- MODALE
+const modal = document.getElementById("myModal");
+const openBtn = document.getElementById("openModal");
+const closeBtn = document.querySelector(".closeBtn");
+
+openBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+});
+const closeModal = () =>{
+  modal.classList.remove('active');
+};
+closeBtn.addEventListener('click',closeModal);
+window.addEventListener('click', (event) => {
+  if (event.target === modal){
+    closeModal();
+  }
+});
