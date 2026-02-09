@@ -4,13 +4,13 @@ document.getElementById("my-bouton").onclick = function direBonjour() {
   alert("Hello !");
 };
 // -------- Calculatrice
-document.getElementById("mon-bouton").onclick = function calculer() {
-  let value1 = document.getElementById("premier-nombre").value;
-  let value2 = document.getElementById("deuxieme-nombre").value;
-  let nombre1 = parseFloat(value1);
-  let nombre2 = parseFloat(value2);
-  resultat.value = nombre1 + nombre2;
-};
+// document.getElementById("mon-bouton").onclick = function calculer() {
+//   let value1 = document.getElementById("premier-nombre").value;
+//   let value2 = document.getElementById("deuxieme-nombre").value;
+//   let nombre1 = parseFloat(value1);
+//   let nombre2 = parseFloat(value2);
+//   resultat.value = nombre1 + nombre2;
+// };
 
 let element = document.getElementById("second");
 element.classList.remove("hidden");
@@ -92,7 +92,7 @@ for (let i = 0; i < paragraphes.length; i++) {
 
 // palindrome("kayak")
 
-// ----------FEU TRICOLORE
+// ---------- EXO 2 : FEU TRICOLORE
 const redLight = document.getElementById("redLight");
 const orangeLight = document.getElementById("orangeLight");
 const greenLight = document.getElementById("greenLight");
@@ -116,7 +116,7 @@ setInterval(() => {
   }
 }, 1500);
 
-// ------------- MODALE
+// ------------- EXO 3 : MODALE
 const modal = document.getElementById("myModal");
 const openBtn = document.getElementById("openModal");
 const closeBtn = document.querySelector(".closeBtn");
@@ -133,3 +133,23 @@ window.addEventListener('click', (event) => {
     closeModal();
   }
 });
+
+//------------EXO 4 CALCULE SOMME
+class CalculateurSomme{
+  constructor(nombres){
+    this.nombres = nombres;
+    this.resultat = 0;
+  }
+  calculer(){
+    this.resultat = this.nombres.reduce((accumulator, valeur) => accumulator + valeur, 0);
+    return this.resultat;
+  }
+  afficher(){
+    console.log(`La liste est: [${this.nombres}]`);
+    console.log(`Le resultat de la somme est: [${this.resultat}]`);
+  }
+}
+const liste = [2,4,6,8,10];
+const calculateur = new CalculateurSomme(liste);
+calculateur.calculer();
+calculateur.afficher();
