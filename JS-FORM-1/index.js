@@ -377,3 +377,56 @@ console.log({
   mana: mage.mana,
 });
 /*----------------------Fin jeux----------------*/
+//-------------Ternaires
+
+// let age = 5;
+// let acces = age >= 18 ? 'Autorisé' : 'Refusé'
+// console.log(acces);
+
+// let prenom = prompt("Quel est ton prénom ?");
+// let reponse = prenom === "" ? ('Bonjour, ' + prenom) : 'Aucun prénom saisi';
+// alert(reponse);
+
+// let nombre = prompt("Choisi un nombre : ");
+// let rep = nombre%2 === 0 ? 'Pair' : "Impair";
+// alert(rep);
+
+// let note = prompt("Choisi une note entre 0 et 20:");
+// let noteRep = note >= 16 ? 'Excellent'
+//               : note >= 12 ? 'Bien'
+//               : note >= 10 ? 'Moyen'
+//               : "Insuffisant";
+// alert(noteRep);
+
+let tableau = [-5, 6, -15, 82, 8, 0];
+let posNeg = tableau.map((x) => x > 0 ? '+'
+                          : x === 0 ? '0'
+                          : '-');
+console.log(posNeg);
+
+let table = [5, 2, 8, 6, 4, 1, 3, 12];
+let pairNumber = table.filter((x) => x %2 ===0);
+console.log(pairNumber);
+
+let tableMot = ['Bonjour', 'Anticonstitutionnellement', 'Jeu', 'Chat', 'Maison', 'Table'];
+let shortWord = tableMot.filter((word) => word.length <= 5);
+console.log(shortWord);
+
+// let personnes = [
+//   {nom: "Alice", age: 22},
+//   {nom: "Bob", age: 17},
+//   {nom: "Charlie", age: 30}
+// ];
+// let adult = personnes.filter((age) => age >= 18);
+// console.log(adult);
+
+// let number = [3, 1, 2, 50];
+// let calcNumber = number.reduce((accumulator, currentValue) => accumulator + currentValue);
+// console.log(calcNumber);
+
+let tableNumber = [5, 3, 6, 9];
+let produitNumber = tableNumber.reduce((accumulator, currentValue) => accumulator * currentValue);
+console.log(produitNumber);
+
+let UserWordV = prompt('Ecrivez un mot');
+let voyelles = UserWordV.reduce(())
