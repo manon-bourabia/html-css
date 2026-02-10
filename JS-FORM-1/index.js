@@ -177,60 +177,203 @@ calculateur.calculer();
 calculateur.afficher();
 
 //---------EXO 5: MODULE DE COMBAT
-class Arme {
-  constructor(nom, degats){
-    this.nom = nom;
-    this.degats = degats;
-  }
-}
-class Sort {
-  constructor(name, puissance){
-    this.name = name;
-    this.puissance = puissance;
-  }
-}
-const monArme = new Arme ("Epée", 100);
-const monSort = new Sort ("Foudre", 500);
-console.log("Objet Arme :", monArme);
-console.log("Objet Sort :", monSort);
+// class Arme {
+//   constructor(nom, degats) {
+//     this.nom = nom;
+//     this.degats = degats;
+//   }
+// }
+// class Sort {
+//   constructor(name, puissance) {
+//     this.name = name;
+//     this.puissance = puissance;
+//   }
+// }
+// const monArme = new Arme("Epée", 100);
+// const monSort = new Sort("Foudre", 500);
+// console.log("Objet Arme :", monArme);
+// console.log("Objet Sort :", monSort);
 
-class Personnage{
-  constructor(nom, santé, force, titre){
+// class Personnage {
+//   constructor(nom, santé, force, titre) {
+//     this.nom = nom;
+//     this.santé = santé;
+//     this.force = force;
+//     this.titre = titre;
+//   }
+// }
+// class Guerrier extends Personnage {
+//   constructor(nom, santé, force, titre, armure) {
+//     super(nom, santé, force, titre);
+//     this.armure = armure;
+//   }
+// }
+// class Mage extends Personnage {
+//   constructor(nom, santé, force, titre, mana) {
+//     super(nom, santé, force, titre);
+//     this.mana = mana;
+//   }
+// }
+// class Tireur extends Personnage {
+//   constructor(nom, santé, force, titre, precision) {
+//     super(nom, santé, force, titre);
+//     this.precision = precision;
+//   }
+// }
+// class Assassin extends Personnage {
+//   constructor(nom, santé, force, titre, discretion) {
+//     super(nom, santé, force, titre);
+//     this.discretion = discretion;
+//   }
+// }
+// const ambessa = new Guerrier("Ambessa", 200, 80, "Matriarche de guerre", 50);
+// const ahri = new Mage("Ahri", 150, 60, "Renard à neuf queues", 150);
+// const akshan = new Tireur("Akshan", 150, 60, "Sentinelle rebelle", "95%");
+// const fizz = new Assassin("Fizz", 100, 70, "Filou des mers", "Espiègle");
+// console.log("Liste des personnages");
+// console.table([ambessa, ahri, akshan, fizz]);
+
+//---------------EXO CORRECTION MODULE DE COMBAT JEREMIE
+class Arme {
+  constructor(hammer, shield, sword) {
+    this.hammer = hammer;
+    this.shield = shield;
+    this.sword = sword;
+  }
+  decrire() {
+    return ` A ${this.hammer} and a ${this.shield} and a ${this.sword}`;
+  }
+}
+// // class Arme {
+// //     constructor(hammer= 'no hammer', shield='no shield', sword='sword') {
+// //         this.hammer = hammer;
+// //         this.shield = shield;
+// //         this.sword = sword;
+// //     }
+// //     decrire() {
+// //         return ` A ${this.hammer} and a ${this.shield} and a ${this.sword}`;
+// //     }
+// // }
+class Sort {
+  constructor(firespell, icespell, waterspell, rockrain) {
+    this.firespell = firespell;
+    this.icespell = icespell;
+    this.waterspell = waterspell;
+    this.rockrain = rockrain;
+  }
+  decrire() {
+    return `The ${this.firespell} and ${this.icespell} and ${this.waterspell} and ${this.rockrain}`;
+  }
+}
+let weapon1 = new Arme();
+console.log(weapon1.decrire());
+
+let weapon2 = new Arme("gros marteau", "grand bouclier");
+console.log(weapon2.decrire());
+
+let weapon3 = new Arme("gros marteau", "grand bouclier", "épée magique");
+console.log(weapon3.decrire());
+
+/*------------module personnage---JEREMIE------------*/
+class Personnage {
+  constructor(nom, sante, force, titre) {
     this.nom = nom;
-    this.santé = santé;
-    this.force = force;
     this.titre = titre;
+    this.sante = sante;
+    this.force = force;
+  }
+
+  decrire() {
+    return `${this.nom} a ${this.sante} points de vie et ${this.force} en force`;
+  }
+}
+class Aventurier extends Personnage {
+  constructor(nom, sante, force, xp, titre = "Aventurier") {
+    super(nom, sante, force, titre);
+    this.xp = xp;
+  }
+
+  decrire() {
+    return `${super.decrire()} et ${this.xp} points d'expérience`;
   }
 }
 class Guerrier extends Personnage {
-  constructor (nom, santé, force, titre, armure){
-    super(nom, santé, force, titre);
-    this.armure = armure;
+  constructor(nom, sante, force, xp, rage, titre = "Guerrier") {
+    super(nom, sante, force, titre);
+    this.xp = xp;
+    this.rage = rage;
+  }
+  decrire() {
+    return `${super.decrire()} et ${this.xp} points d'expérience et ${this.rage} points de rage`;
+  }
+}
+class Paladin extends Aventurier {
+  constructor(nom, sante, force, xp, vertu, titre = "Paladin") {
+    super(nom, sante, force, xp, titre);
+    this.vertu = vertu;
+  }
+  decrire() {
+    return `${super.decrire()} et ${this.vertu} points de vertu`;
   }
 }
 class Mage extends Personnage {
-  constructor(nom, santé, force, titre, mana){
-    super(nom, santé, force, titre);
+  constructor(nom, sante, force, xp, mana, titre = "Mage") {
+    super(nom, sante, force, titre);
+    this.xp = xp;
     this.mana = mana;
   }
-}
-class Tireur extends Personnage{
-  constructor(nom, santé, force, titre, precision){
-    super(nom, santé, force, titre);
-    this.precision = precision;
+  decrire() {
+    return `${super.decrire()} et ${this.xp} points d'expérience et ${this.mana} points de mana`;
   }
 }
-class Assassin extends Personnage{
-  constructor(nom, santé, force, titre, discretion){
-    super(nom, santé, force, titre);
-    this.discretion = discretion;
-  }
-} 
-const ambessa = new Guerrier ("Ambessa", 200, 80, "Matriarche de guerre", 50);
-const ahri = new Mage ("Ahri", 150, 60, "Renard à neuf queues", 150);
-const akshan = new Tireur ("Akshan", 150, 60, "Sentinelle rebelle", "95%");
-const fizz = new Assassin ("Fizz", 100, 70, "Filou des mers", "Espiègle");
-console.log("Liste des personnages");
-console.table([ambessa, ahri, akshan, fizz]);
+/*--------------Jeu-JEREMIE--------------*/
+//console.log(aventurier.decrire());
 
+const arme = new Arme("hammer", "shield", "sword");
+const sort = new Sort("firespell", "icespell", "waterspell", "rockrain");
+console.log(arme.decrire());
+console.log(sort.decrire());
 
+const perso1 = new Personnage("Jecoq", "Aventurier", 1000, 150, 25);
+const aventurier = new Aventurier(perso1, 1000, 150, 25);
+console.log({
+  nom: aventurier.nom,
+  titre: aventurier.titre,
+  sante: aventurier.sante,
+  force: aventurier.force,
+  xp: aventurier.xp,
+});
+
+const perso2 = new Personnage("Sigfrid", "Guerrier", 1200, 100, 80, 70);
+const guerrier = new Guerrier(perso2, 1200, 100, 80, 70);
+console.log({
+  nom: guerrier.nom,
+  titre: guerrier.titre,
+  sante: guerrier.sante,
+  force: guerrier.force,
+  xp: guerrier.xp,
+  rage: guerrier.rage,
+});
+
+const perso3 = new Personnage("Galahad", "Paladin", 1000, 100, 60, 50);
+const paladin = new Paladin(perso3, 1000, 100, 60, 50);
+console.log({
+  nom: paladin.nom,
+  titre: paladin.titre,
+  sante: paladin.sante,
+  force: paladin.force,
+  xp: paladin.xp,
+  vertu: paladin.vertu,
+});
+
+const perso4 = new Personnage("Flora", "Mage", 1100, 120, 70, 90);
+const mage = new Mage(perso4, 1100, 120, 70, 90);
+console.log({
+  nom: mage.nom,
+  titre: mage.titre,
+  sante: mage.sante,
+  force: mage.force,
+  xp: mage.xp,
+  mana: mage.mana,
+});
+/*----------------------Fin jeux----------------*/
